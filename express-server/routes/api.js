@@ -4,9 +4,7 @@ const { Router } = require('express');
 const router = Router();
 const dbHost = 'mongodb://database/mean-docker';
 
-mongoose.connect(dbHost, {
-  useNewUrlParser: true,
-});
+mongoose.connect(dbHost, { useNewUrlParser: true });
 
 const userSchema = new mongoose.Schema({
   name: String,
