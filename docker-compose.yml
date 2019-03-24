@@ -32,3 +32,10 @@ services:
   cache:
     container_name: myapp-cache
     image: redis
+    networks:
+      - express
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100MB"
+        max-file: "3"
